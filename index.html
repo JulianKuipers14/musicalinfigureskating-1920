@@ -1,0 +1,623 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>2019/2020花样滑冰X音乐剧</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="be15cf95-9fea-438e-aede-e44d8d857a4c" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">❤️</span></div><h1 class="page-title">2019/2020花样滑冰X音乐剧</h1></header><div class="page-body"><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesSelect"><path d="M7,13 C10.31348,13 13,10.31371 13,7 C13,3.68629 10.31348,1 7,1 C3.68652,1 1,3.68629 1,7 C1,10.31371 3.68652,13 7,13 Z M3.75098,5.32278 C3.64893,5.19142 3.74268,5 3.90869,5 L10.09131,5 C10.25732,5 10.35107,5.19142 10.24902,5.32278 L7.15771,9.29703 C7.07764,9.39998 6.92236,9.39998 6.84229,9.29703 L3.75098,5.32278 Z"></path></svg></span>项目</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesCheckbox"><path d="M0,3 C0,1.34314 1.34326,0 3,0 L11,0 C12.6567,0 14,1.34314 14,3 L14,11 C14,12.6569 12.6567,14 11,14 L3,14 C1.34326,14 0,12.6569 0,11 L0,3 Z M3,1.5 C2.17139,1.5 1.5,2.17157 1.5,3 L1.5,11 C1.5,11.8284 2.17139,12.5 3,12.5 L11,12.5 C11.8286,12.5 12.5,11.8284 12.5,11 L12.5,3 C12.5,2.17157 11.8286,1.5 11,1.5 L3,1.5 Z M2.83252,6.8161 L3.39893,6.27399 L3.57617,6.10425 L3.92334,5.77216 L4.26904,6.10559 L4.44531,6.27582 L5.58398,7.37402 L9.28271,3.81073 L9.45996,3.64008 L9.80664,3.3056 L10.1538,3.63989 L10.3311,3.81067 L10.8936,4.35303 L11.0708,4.52399 L11.4434,4.88379 L11.0708,5.24353 L10.8936,5.41437 L6.1084,10.0291 L5.93115,10.2 L5.58398,10.5344 L5.23682,10.2 L5.05957,10.0292 L2.83057,7.87946 L2.65283,7.70801 L2.27832,7.34674 L2.6543,6.98694 L2.83252,6.8161 Z"></path></svg></span>Jr</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>运动员</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesSelect"><path d="M7,13 C10.31348,13 13,10.31371 13,7 C13,3.68629 10.31348,1 7,1 C3.68652,1 1,3.68629 1,7 C1,10.31371 3.68652,13 7,13 Z M3.75098,5.32278 C3.64893,5.19142 3.74268,5 3.90869,5 L10.09131,5 C10.25732,5 10.35107,5.19142 10.24902,5.32278 L7.15771,9.29703 C7.07764,9.39998 6.92236,9.39998 6.84229,9.29703 L3.75098,5.32278 Z"></path></svg></span>比赛时间</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesSelect"><path d="M7,13 C10.31348,13 13,10.31371 13,7 C13,3.68629 10.31348,1 7,1 C3.68652,1 1,3.68629 1,7 C1,10.31371 3.68652,13 7,13 Z M3.75098,5.32278 C3.64893,5.19142 3.74268,5 3.90869,5 L10.09131,5 C10.25732,5 10.35107,5.19142 10.24902,5.32278 L7.15771,9.29703 C7.07764,9.39998 6.92236,9.39998 6.84229,9.29703 L3.75098,5.32278 Z"></path></svg></span>比赛</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesSelect"><path d="M7,13 C10.31348,13 13,10.31371 13,7 C13,3.68629 10.31348,1 7,1 C3.68652,1 1,3.68629 1,7 C1,10.31371 3.68652,13 7,13 Z M3.75098,5.32278 C3.64893,5.19142 3.74268,5 3.90869,5 L10.09131,5 C10.25732,5 10.35107,5.19142 10.24902,5.32278 L7.15771,9.29703 C7.07764,9.39998 6.92236,9.39998 6.84229,9.29703 L3.75098,5.32278 Z"></path></svg></span>节目</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>剧目</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesUrl"><path d="M3.73333,3.86667 L7.46667,3.86667 C8.49613,3.86667 9.33333,4.70387 9.33333,5.73333 C9.33333,6.7628 8.49613,7.6 7.46667,7.6 L6.53333,7.6 C6.01813,7.6 5.6,8.0186 5.6,8.53333 C5.6,9.04807 6.01813,9.46667 6.53333,9.46667 L7.46667,9.46667 C9.5284,9.46667 11.2,7.79507 11.2,5.73333 C11.2,3.6716 9.5284,2 7.46667,2 L3.73333,2 C1.6716,2 0,3.6716 0,5.73333 C0,7.124 0.762067,8.33453 1.88953,8.97713 C1.87553,8.83107 1.86667,8.6836 1.86667,8.53333 C1.86667,7.92013 1.98753,7.33447 2.2036,6.7978 C1.99267,6.4954 1.86667,6.12953 1.86667,5.73333 C1.86667,4.70387 2.70387,3.86667 3.73333,3.86667 Z M12.1095,5.28907 C12.1231,5.4356 12.1333,5.58307 12.1333,5.73333 C12.1333,6.34607 12.0101,6.9294 11.7931,7.46513 C12.0059,7.768 12.1333,8.13573 12.1333,8.53333 C12.1333,9.5628 11.2961,10.4 10.2667,10.4 L6.53333,10.4 C5.50387,10.4 4.66667,9.5628 4.66667,8.53333 C4.66667,7.50387 5.50387,6.66667 6.53333,6.66667 L7.46667,6.66667 C7.98187,6.66667 8.4,6.24807 8.4,5.73333 C8.4,5.2186 7.98187,4.8 7.46667,4.8 L6.53333,4.8 C4.4716,4.8 2.8,6.4716 2.8,8.53333 C2.8,10.59507 4.4716,12.2667 6.53333,12.2667 L10.2667,12.2667 C12.3284,12.2667 14,10.59507 14,8.53333 C14,7.14267 13.2375,5.93167 12.1095,5.28907 Z"></path></svg></span>微博链接</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>补充</th></tr></thead><tbody><tr id="bc46c7fc-0f65-4eb5-8d71-93659fbf1ebd"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Petr-GUMENNIK-bc46c7fc0f654eb58d7193659fbf1ebd">Petr GUMENNIK</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">歌剧魅影</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAyHI6Bnh" class="url-value">https://weibo.com/5909340151/IAyHI6Bnh</a></td><td class="cell-[Ve~">jgp车里雅宾斯克站</td></tr><tr id="5dbe42a4-2225-4ceb-8ed9-a2b51cc58285"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Petr-GUMENNIK-5dbe42a422254ceb8ed9a2b51cc58285">Petr GUMENNIK</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">歌剧魅影</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAyU6pHj0" class="url-value">https://weibo.com/5909340151/IAyU6pHj0</a></td><td class="cell-[Ve~"></td></tr><tr id="85dd526b-9f6f-4b40-9551-8cc41c2e0e9d"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Utana-YOSHIDA-Shingo-NISHIYAMA-85dd526b9f6f4b4095518cc41c2e0e9d">Utana YOSHIDA / Shingo NISHIYAMA</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">A Chorus Line</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABaCo7bt" class="url-value">https://weibo.com/5909340151/IABaCo7bt</a></td><td class="cell-[Ve~"></td></tr><tr id="f2ada689-3e59-4a4d-b844-1c6b5e825a5f"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Holly-HARRIS-Jason-CHAN-f2ada6893e594a4db8441c6b5e825a5f">Holly HARRIS / Jason CHAN</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-gray">华沙杯</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">A Chorus Line</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABGJnvvM" class="url-value">https://weibo.com/5909340151/IABGJnvvM</a></td><td class="cell-[Ve~">2019-华沙杯</td></tr><tr id="1729db6a-f35c-4722-9d0c-605653b3f51b"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Allison-REED-Saulius-AMBRULEVICIUS-1729db6af35c47229d0c605653b3f51b">Allison REED / Saulius AMBRULEVICIUS</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Bandstand</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAyV2Asi3" class="url-value">https://weibo.com/5909340151/IAyV2Asi3</a></td><td class="cell-[Ve~"></td></tr><tr id="c1e104a1-1784-478f-b0ab-c3351fde8cc4"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Arina-USHAKOVA-Maxim-NEKRASOV-c1e104a11784478fb0abc3351fde8cc4">Arina USHAKOVA / Maxim NEKRASOV</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">芝加哥</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAz5cyaxr" class="url-value">https://weibo.com/5909340151/IAz5cyaxr</a></td><td class="cell-[Ve~"></td></tr><tr id="e6bc4db9-f907-4eba-bfd9-962977c3257a"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Dias-JIRENBAYEV-e6bc4db9f9074ebabfd9962977c3257a">Dias JIRENBAYEV</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">阿拉丁</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAznK3Cx6" class="url-value">https://weibo.com/5909340151/IAznK3Cx6</a></td><td class="cell-[Ve~"></td></tr><tr id="0e0e27cc-3921-4de5-8a7f-33bb19902665"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Allison-Reed-Saulius-Ambrulevicius-0e0e27cc39214de58a7f33bb19902665">Allison Reed/Saulius Ambrulevicius</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">IDF</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Bandstand</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IvPYHF1zI" class="url-value">https://weibo.com/5909340151/IvPYHF1zI</a></td><td class="cell-[Ve~"></td></tr><tr id="a5f89aab-c71d-40e7-aace-954134207da4"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Dmitri-Aliev-a5f89aabc71d40e7aace954134207da4">Dmitri Aliev</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">GPF</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-pink">SP</span></td><td class="cell-pGpk">法扎</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IwLzbhThG" class="url-value">https://weibo.com/5909340151/IwLzbhThG</a></td><td class="cell-[Ve~"></td></tr><tr id="ae61fbc4-cc45-42f5-9bdf-668a37270550"><td class="cell-zJ2k"><span class="selected-value select-value-color-red">Ladies</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Amy-Lin-ae61fbc4cc4542f59bdf668a37270550">Amy Lin</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">4CC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">日落大道</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IxH84dLhS" class="url-value">https://weibo.com/5909340151/IxH84dLhS</a></td><td class="cell-[Ve~"></td></tr><tr id="2a9f5275-b22f-461b-ab65-9006bb942a08"><td class="cell-zJ2k"><span class="selected-value select-value-color-purple">Pairs</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Dorota-BRODA-Pedro-BETEGON-MARTIN-2a9f5275b22f461bab659006bb942a08">Dorota BRODA / Pedro BETEGON MARTIN</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-pink">SP</span></td><td class="cell-pGpk">狮子王</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IxmaxCjt7" class="url-value">https://weibo.com/5909340151/IxmaxCjt7</a></td><td class="cell-[Ve~"></td></tr><tr id="bc8a5f84-4811-41b1-8fb2-3ef6c3e9d7f1"><td class="cell-zJ2k"><span class="selected-value select-value-color-red">Ladies</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Yuhana-YOKOI-bc8a5f84481141b18fb23ef6c3e9d7f1">Yuhana YOKOI</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-default">全日</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">歌剧魅影</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IyhbUn6uc" class="url-value">https://weibo.com/5909340151/IyhbUn6uc</a></td><td class="cell-[Ve~"></td></tr><tr id="58b6a649-f918-4b64-9ac7-0b79c0ea4741"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Dmitri-Aliev-58b6a649f9184b649ac70b79c0ea4741">Dmitri Aliev</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">SA</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-pink">SP</span></td><td class="cell-pGpk">法扎</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IyjEMgJtD" class="url-value">https://weibo.com/5909340151/IyjEMgJtD</a></td><td class="cell-[Ve~"></td></tr><tr id="bbd4ec6e-16ff-4419-98b9-07e702984203"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Allison-REED-Saulius-AMBRULEVICIUS-bbd4ec6e16ff441998b907e702984203">Allison REED / Saulius AMBRULEVICIUS</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">RC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Bandstand</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IyjI1dhwT" class="url-value">https://weibo.com/5909340151/IyjI1dhwT</a></td><td class="cell-[Ve~"></td></tr><tr id="8359eae1-62af-41d9-8930-76d6df5742db"><td class="cell-zJ2k"><span class="selected-value select-value-color-red">Ladies</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Hanul-KIM-8359eae162af41d9893076d6df5742db">Hanul KIM</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">4CC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">西贡小姐</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IyjSnlAHE" class="url-value">https://weibo.com/5909340151/IyjSnlAHE</a></td><td class="cell-[Ve~"></td></tr><tr id="ecdeae9c-f015-43b9-b7ea-b37d9ae2da6f"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Maria-KAZAKOVA-Georgy-REVIYA-ecdeae9cf01543b9b7eab37d9ae2da6f">Maria KAZAKOVA / Georgy REVIYA</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Beautiful the Carole King</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABvgby16" class="url-value">https://weibo.com/5909340151/IABvgby16</a></td><td class="cell-[Ve~"></td></tr><tr id="f7884ad2-1914-4202-b77b-4bf2b747046e"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Anastasia-SKOPTCOVA-Kirill-ALESHIN-f7884ad219144202b77b4bf2b747046e">Anastasia SKOPTCOVA / Kirill ALESHIN</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">COC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Bonnie &amp; Clyde</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAz2TfF1g" class="url-value">https://weibo.com/5909340151/IAz2TfF1g</a></td><td class="cell-[Ve~"></td></tr><tr id="2e74b412-201f-49ab-8d77-982f9d2163c6"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Laurence-FOURNIER-BEAUDRY-Nikolaj-SORENSEN-2e74b412201f49ab8d77982f9d2163c6">Laurence FOURNIER BEAUDRY / Nikolaj SORENSEN</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">SA</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Bonnie &amp; Clyde</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IzljQxiUs" class="url-value">https://weibo.com/5909340151/IzljQxiUs</a></td><td class="cell-[Ve~"></td></tr><tr id="88bca197-c57f-4fbe-9289-2daf64219177"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Laurence-FOURNIER-BEAUDRY-Nikolaj-SORENSEN-88bca197c57f4fbe92892daf64219177">Laurence FOURNIER BEAUDRY / Nikolaj SORENSEN</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">COC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Bonnie &amp; Clyde</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/Izlklx0g1" class="url-value">https://weibo.com/5909340151/Izlklx0g1</a></td><td class="cell-[Ve~"></td></tr><tr id="fef94df3-80ee-44e9-badf-0035d04a604a"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Anastasia-SKOPTCOVA-Kirill-ALESHIN-fef94df380ee44e9badf0035d04a604a">Anastasia SKOPTCOVA / Kirill ALESHIN</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">RC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Bonnie &amp; Clyde</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IBcaebvQ1" class="url-value">https://weibo.com/5909340151/IBcaebvQ1</a></td><td class="cell-[Ve~"></td></tr><tr id="2d277bf0-fd37-4c18-ba46-46909c54b0fa"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Elizaveta-SHANAEVA-Devid-NARYZHNYY-2d277bf0fd374c18ba4646909c54b0fa">Elizaveta SHANAEVA / Devid NARYZHNYY</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">GPF</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Bonnie and Clyde</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABMSh1gl" class="url-value">https://weibo.com/5909340151/IABMSh1gl</a></td><td class="cell-[Ve~"></td></tr><tr id="371f136e-c919-4705-8950-67ad1d13c85f"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Betina-POPOVA-Sergey-MOZGOV-371f136ec9194705895067ad1d13c85f">Betina POPOVA / Sergey MOZGOV</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-yellow">SC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Cabaret</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IC6e5F0jv" class="url-value">https://weibo.com/5909340151/IC6e5F0jv</a></td><td class="cell-[Ve~"></td></tr><tr id="466b51ea-ce56-493b-9835-ed55374f469f"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Dimitri-Aliev-466b51eace56493b9835ed55374f469f">Dimitri Aliev</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-pink">SP</span></td><td class="cell-pGpk">法扎</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAATa2DHz" class="url-value">https://weibo.com/5909340151/IAATa2DHz</a></td><td class="cell-[Ve~"></td></tr><tr id="c83820f2-9bd2-43a9-8cd5-e7cf57de6972"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Emmy-BRONSARD-Aissa-BOUARAGUIA-c83820f29bd243a98cd5e7cf57de6972">Emmy BRONSARD / Aissa BOUARAGUIA</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Cabaret</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAAqQdjwV" class="url-value">https://weibo.com/5909340151/IAAqQdjwV</a></td><td class="cell-[Ve~"></td></tr><tr id="12d57714-9d2e-4c5a-8e84-90986d1e6abe"><td class="cell-zJ2k"><span class="selected-value select-value-color-red">Ladies</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Nelli-IOFFE-12d577149d2e4c5a8e8490986d1e6abe">Nelli IOFFE</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-pink">SP</span></td><td class="cell-pGpk">Cat</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/Iy8YNjDvu" class="url-value">https://weibo.com/5909340151/Iy8YNjDvu</a></td><td class="cell-[Ve~"></td></tr><tr id="8e5843ff-1182-459d-bfb0-748c4e80dbe0"><td class="cell-zJ2k"><span class="selected-value select-value-color-purple">Pairs</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Diana-MUKHAMETZIANOVA-Ilya-MIRONOV-8e5843ff1182459dbfb0748c4e80dbe0">Diana MUKHAMETZIANOVA / Ilya MIRONOV</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">GPF</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">Chess</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAzbx0lQl" class="url-value">https://weibo.com/5909340151/IAzbx0lQl</a></td><td class="cell-[Ve~"></td></tr><tr id="5be31c6d-715f-4e20-bb66-8c7a7213bbba"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Mina-ZDRAVKOVA-Christopher-M-DAVIS-5be31c6d715f4e20bb668c7a7213bbba">Mina ZDRAVKOVA / Christopher M. DAVIS</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">chicago</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IyjOMc74h" class="url-value">https://weibo.com/5909340151/IyjOMc74h</a></td><td class="cell-[Ve~"></td></tr><tr id="ce7607ad-f1a4-4b7d-ab84-2799a599ae97"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Maxine-WEATHERBY-Temirlan-YERZHANOV-ce7607adf1a44b7dab842799a599ae97">Maxine WEATHERBY / Temirlan YERZHANOV</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">4CC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Chicago</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IzlucDEma" class="url-value">https://weibo.com/5909340151/IzlucDEma</a></td><td class="cell-[Ve~">2019 US Int Skating Class</td></tr><tr id="a0fe9865-5c0b-48ef-bfeb-1e36048c526d"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Misato-KOMATSUBARA-Tim-KOLETO-a0fe98655c0b48efbfeb1e36048c526d">Misato KOMATSUBARA / Tim KOLETO</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">COC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Dreamgirls</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAAAL6GkL" class="url-value">https://weibo.com/5909340151/IAAAL6GkL</a></td><td class="cell-[Ve~"></td></tr><tr id="f8188b9e-a12d-4617-9de2-97ce28957450"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Francesca-RIGHI-Aleksei-DUBROVIN-f8188b9ea12d46179de297ce28957450">Francesca RIGHI / Aleksei DUBROVIN</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-green">JGP</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Elvis The Musical</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABLwmUSu" class="url-value">https://weibo.com/5909340151/IABLwmUSu</a></td><td class="cell-[Ve~">波兰站</td></tr><tr id="7c21fb16-7445-42bc-a1f2-ad76341055fc"><td class="cell-zJ2k"><span class="selected-value select-value-color-red">Ladies</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Young-you-7c21fb16744542bca1f2ad76341055fc">Young
+  you</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-yellow">SC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">Evita</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAyLweEUM" class="url-value">https://weibo.com/5909340151/IAyLweEUM</a></td><td class="cell-[Ve~"></td></tr><tr id="0eb1c442-9ba9-42bf-8195-dc1adce2a714"><td class="cell-zJ2k"><span class="selected-value select-value-color-red">Ladies</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Young-You-0eb1c4429ba942bf8195dc1adce2a714">Young You</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">4CC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">Evita</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAyTjkeNo" class="url-value">https://weibo.com/5909340151/IAyTjkeNo</a></td><td class="cell-[Ve~"></td></tr><tr id="1cfa3aad-80c4-447d-8b6a-7c48aaffd758"><td class="cell-zJ2k"><span class="selected-value select-value-color-red">Ladies</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Young-You-1cfa3aad80c4447d8b6a7c48aaffd758">Young  You</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">COC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">Evita</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAAOoc5BI" class="url-value">https://weibo.com/5909340151/IAAOoc5BI</a></td><td class="cell-[Ve~"></td></tr><tr id="f61aed83-8fda-4fe4-b983-1c1135e7fbf8"><td class="cell-zJ2k"><span class="selected-value select-value-color-red">Ladies</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Alison-Schumacher-f61aed838fda4fe4b9831c1135e7fbf8">Alison Schumacher</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">4CC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">Ghost</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IvHOArNkO" class="url-value">https://weibo.com/5909340151/IvHOArNkO</a></td><td class="cell-[Ve~">萨格勒布站</td></tr><tr id="3ce7031a-1719-4608-b7dd-816b105175fe"><td class="cell-zJ2k"><span class="selected-value select-value-color-red">Ladies</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Alison-SCHUMACHER-3ce7031a17194608b7dd816b105175fe">Alison SCHUMACHER</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">Ghost</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IyhgmFgUQ" class="url-value">https://weibo.com/5909340151/IyhgmFgUQ</a></td><td class="cell-[Ve~"></td></tr><tr id="761afbca-65bd-4794-917a-8a7abedc2844"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Gina-ZEHNDER-Beda-Leon-SIEBER-761afbca65bd4794917a8a7abedc2844">Gina ZEHNDER / Beda Leon SIEBER</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-green">FD</span></td><td class="cell-pGpk">Ghost</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABHM6CZn" class="url-value">https://weibo.com/5909340151/IABHM6CZn</a></td><td class="cell-[Ve~"></td></tr><tr id="112f6de6-bca3-4489-82a2-8725208ade50"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Jasmine-TESSARI-Francesco-FIORETTI-112f6de6bca3448982a28725208ade50">Jasmine TESSARI / Francesco FIORETTI</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">RC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">雨中曲</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IC6obeqSp" class="url-value">https://weibo.com/5909340151/IC6obeqSp</a></td><td class="cell-[Ve~"></td></tr><tr id="bd3b4eb5-313f-46a3-9ab5-14c2d36cea0f"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Jasmine-TESSARI-Francesco-FIORETTI-bd3b4eb5313f46a39ab514c2d36cea0f">Jasmine TESSARI / Francesco FIORETTI</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">雨中曲</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABFD8UHE" class="url-value">https://weibo.com/5909340151/IABFD8UHE</a></td><td class="cell-[Ve~"></td></tr><tr id="75e35226-640b-42a1-8d26-f65493f6b890"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Julia-WAGRET-Pierre-SOUQUET-BASIEGE-75e35226640b42a18d26f65493f6b890">Julia WAGRET / Pierre SOUQUET-BASIEGE</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">IDF</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">雨中曲</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABCs2ppP" class="url-value">https://weibo.com/5909340151/IABCs2ppP</a></td><td class="cell-[Ve~"></td></tr><tr id="91c894fe-ef9d-4cb8-be26-95803a7e80fa"><td class="cell-zJ2k"><span class="selected-value select-value-color-red">Ladies</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Laura-KARHUNEN-91c894feef9d4cb8be2695803a7e80fa">Laura KARHUNEN</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">西贡小姐</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAAM1C1li" class="url-value">https://weibo.com/5909340151/IAAM1C1li</a></td><td class="cell-[Ve~"></td></tr><tr id="cace9573-e98a-43d9-a348-cf57c089c880"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Tatjana-BUNINA-Ivan-KUZNETSOV-cace9573e98a43d9a348cf57c089c880">Tatjana BUNINA / Ivan KUZNETSOV</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Godsbell</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABdNrk1r" class="url-value">https://weibo.com/5909340151/IABdNrk1r</a></td><td class="cell-[Ve~"></td></tr><tr id="4992e411-1270-4868-8957-00f3e7a4d7a0"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Natalia-KALISZEK-Maksym-SPODYRIEV-4992e41112704868895700f3e7a4d7a0">Natalia KALISZEK / Maksym SPODYRIEV</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Kinky Boots</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAyEm4ZmL" class="url-value">https://weibo.com/5909340151/IAyEm4ZmL</a></td><td class="cell-[Ve~"></td></tr><tr id="28778ca6-2a1b-4589-b954-4215e83691e5"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Natalia-KALISZEK-Maksym-SPODYRIEV-28778ca62a1b4589b9544215e83691e5">Natalia KALISZEK / Maksym SPODYRIEV</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">IDF</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Kinky Boots</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IxOMTyBia" class="url-value">https://weibo.com/5909340151/IxOMTyBia</a></td><td class="cell-[Ve~"></td></tr><tr id="384744ad-b86b-40bd-9a4e-f8c0b533df9b"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Natalia-KALISZEK-Maksym-SPODYRIEV-384744adb86b40bd9a4ef8c0b533df9b">Natalia KALISZEK / Maksym SPODYRIEV</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">RC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Kinky boots</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/Izlmuehmn" class="url-value">https://weibo.com/5909340151/Izlmuehmn</a></td><td class="cell-[Ve~"></td></tr><tr id="a0dc0956-e0c4-4bcc-b656-0273dd610852"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Christina-CARREIRA-Anthony-PONOMARENKO-a0dc0956e0c44bccb6560273dd610852">Christina CARREIRA / Anthony PONOMARENKO</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">SA</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Kiss Me Kate</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAz7c68lv" class="url-value">https://weibo.com/5909340151/IAz7c68lv</a></td><td class="cell-[Ve~"></td></tr><tr id="eb238625-6efe-4794-a816-6a620609fcc5"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Christina-CARREIRA-Anthony-PONOMARENKO-eb2386256efe4794a8166a620609fcc5">Christina CARREIRA / Anthony PONOMARENKO</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-red">NHK</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Kiss me Kate</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IC6irtifD" class="url-value">https://weibo.com/5909340151/IC6irtifD</a></td><td class="cell-[Ve~"></td></tr><tr id="c53c39f8-0477-4b65-b066-1ae97e193281"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Evgeniia-LOPAREVA-Geoffrey-BRISSAUD-c53c39f804774b65b0661ae97e193281">Evgeniia LOPAREVA / Geoffrey BRISSAUD</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Kiss me Kate</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABP0pi0H" class="url-value">https://weibo.com/5909340151/IABP0pi0H</a></td><td class="cell-[Ve~"></td></tr><tr id="cd15550e-56cb-4bbe-8d1b-9a834cfeca94"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Madison-CHOCK-Evan-BATES-cd15550e56cb4bbe8d1b9a834cfeca94">Madison CHOCK / Evan BATES</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">GPF</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Kiss me Kate</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IC6pAs3m0" class="url-value">https://weibo.com/5909340151/IC6pAs3m0</a></td><td class="cell-[Ve~"></td></tr><tr id="3b6f8f6a-52d8-4f83-8c9e-3205581a36ce"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Madison-CHOCK-Evan-BATES-3b6f8f6a52d84f838c9e3205581a36ce">Madison CHOCK / Evan BATES</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">COC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Kiss Me, Kate</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IC6hEpaB9" class="url-value">https://weibo.com/5909340151/IC6hEpaB9</a></td><td class="cell-[Ve~"></td></tr><tr id="c932171e-021d-4b18-825b-3b75495e6c99"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Madison-CHOCK-Evan-BATES-c932171e021d4b18825b3b75495e6c99">Madison CHOCK / Evan BATES</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">4CC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Kiss me, Kate</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABA6lU4o" class="url-value">https://weibo.com/5909340151/IABA6lU4o</a></td><td class="cell-[Ve~"></td></tr><tr id="2752f749-8c6d-445a-9e15-e78a68d5a590"><td class="cell-zJ2k"><span class="selected-value select-value-color-red">Ladies</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Mariia-BOLSHEVA-2752f7498c6d445a9e15e78a68d5a590">Mariia BOLSHEVA</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-green">JGP</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">法扎</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAAv4zcBE" class="url-value">https://weibo.com/5909340151/IAAv4zcBE</a></td><td class="cell-[Ve~"> Gdansk </td></tr><tr id="1431e1d9-ba54-48ee-b095-982c110a6e58"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Piper-GILLES-Paul-POIRIER-1431e1d9ba5448eeb095982c110a6e58">Piper GILLES / Paul POIRIER</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">GPF</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Mack and Mabel</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAyHugytG" class="url-value">https://weibo.com/5909340151/IAyHugytG</a></td><td class="cell-[Ve~"></td></tr><tr id="e84344fb-36d4-4476-8745-7d78ba256826"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Piper-GILLES-Paul-POIRIER-e84344fb36d4447687457d78ba256826">Piper GILLES / Paul POIRIER</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-yellow">SC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Mack and Mabel</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/Izlm4vgJE" class="url-value">https://weibo.com/5909340151/Izlm4vgJE</a></td><td class="cell-[Ve~"></td></tr><tr id="850c73ba-ffd6-4e22-9d49-d1c8966d3df6"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Piper-GILLES-Paul-POIRIER-850c73baffd64e229d49d1c8966d3df6">Piper GILLES / Paul POIRIER</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">RC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Mack and Mabel</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IC6jBxr3s" class="url-value">https://weibo.com/5909340151/IC6jBxr3s</a></td><td class="cell-[Ve~"></td></tr><tr id="db12b5c7-7237-4d18-93cb-e5867b347ca9"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Piper-GILLES-Paul-POIRIER-db12b5c772374d1893cbe5867b347ca9">Piper GILLES / Paul POIRIER</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">4CC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Mack and Mabel</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABp387VJ" class="url-value">https://weibo.com/5909340151/IABp387VJ</a></td><td class="cell-[Ve~"></td></tr><tr id="d6ac8c0e-8905-4a00-8c5a-b086ea25cfd6"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Haley-SALES-Nikolas-WAMSTEEKER-d6ac8c0e89054a008c5ab086ea25cfd6">Haley SALES / Nikolas WAMSTEEKER</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-yellow">SC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Mamma Mia</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAyWU7sQx" class="url-value">https://weibo.com/5909340151/IAyWU7sQx</a></td><td class="cell-[Ve~"></td></tr><tr id="7913bd85-071e-4da3-a19f-c1ea2d9dbbf8"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Tina-GARABEDIAN-Simon-PROULX-SENECAL-7913bd85071e4da3a19fc1ea2d9dbbf8">Tina GARABEDIAN /Simon PROULX SENECAL</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Mamma Mia</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IyjLVcbCr" class="url-value">https://weibo.com/5909340151/IyjLVcbCr</a></td><td class="cell-[Ve~"></td></tr><tr id="1f830bbd-3a5b-4182-b6c7-883a9c679102"><td class="cell-zJ2k"><span class="selected-value select-value-color-purple">Pairs</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Alyssa-MONTAN-Manuel-PIAZZA-1f830bbd3a5b4182b6c7883a9c679102">Alyssa MONTAN / Manuel PIAZZA</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">Mamma mia</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAyYoEu11" class="url-value">https://weibo.com/5909340151/IAyYoEu11</a></td><td class="cell-[Ve~"></td></tr><tr id="7d81d4df-5719-4d3a-a144-92feeee5e02a"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Matilda-FRIEND-William-BADAOUI-7d81d4df57194d3aa14492feeee5e02a">Matilda FRIEND / William BADAOUI</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">4CC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Priscilla Queen of the Desert - The Musical</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IzltIaGMU" class="url-value">https://weibo.com/5909340151/IzltIaGMU</a></td><td class="cell-[Ve~">2019 Winter Universiade</td></tr><tr id="8f0ef7ce-44bd-418f-a861-7f5170614836"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Katarina-WOLFKOSTIN-Jeffrey-CHEN-8f0ef7ce44bd418fa8617f5170614836">Katarina WOLFKOSTIN / Jeffrey CHEN</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">The Boy from Oz</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABAwpYHt" class="url-value">https://weibo.com/5909340151/IABAwpYHt</a></td><td class="cell-[Ve~"></td></tr><tr id="f88845aa-c860-4ef1-9b77-159d3aebb625"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Oona-BROWN-Gage-BROWN-f88845aac8604ef19b77159d3aebb625">Oona BROWN / Gage BROWN</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">The Boy from Oz</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABq73S9t" class="url-value">https://weibo.com/5909340151/IABq73S9t</a></td><td class="cell-[Ve~"></td></tr><tr id="5c8d7568-fd28-41de-bb2f-675cc8292b81"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Nadiia-BASHYNSKA-Peter-BEAUMONT-5c8d7568fd2841debb2f675cc8292b81">Nadiia BASHYNSKA / Peter BEAUMONT</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">The king and I </td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABtGDvLS" class="url-value">https://weibo.com/5909340151/IABtGDvLS</a></td><td class="cell-[Ve~"></td></tr><tr id="1c96c389-f79a-429e-a3c0-e723f1818aa3"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Emily-ROSE-BROWN-James-HERNANDEZ-1c96c389f79a429ea3c0e723f1818aa3">Emily ROSE BROWN / James HERNANDEZ</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Top Hat</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAA0Od3hm" class="url-value">https://weibo.com/5909340151/IAA0Od3hm</a></td><td class="cell-[Ve~"></td></tr><tr id="9b5eea0e-f694-48a7-908c-fb79b5600fba"><td class="cell-zJ2k"><span class="selected-value select-value-color-purple">Pairs</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Letizia-ROSCHER-Luis-SCHUSTER-9b5eea0ef69448a7908cfb79b5600fba">Letizia ROSCHER / Luis SCHUSTER</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">Westside Stories</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAAYeq0HS" class="url-value">https://weibo.com/5909340151/IAAYeq0HS</a></td><td class="cell-[Ve~"></td></tr><tr id="5cdca75d-a786-4b7e-b7cc-815d52207b8c"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Marjorie-LAJOIE-Zachary-LAGHA-5cdca75da7864b7eb7cc815d52207b8c">Marjorie LAJOIE / Zachary LAGHA</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">RC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Westside Story</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IyjVy5D1E" class="url-value">https://weibo.com/5909340151/IyjVy5D1E</a></td><td class="cell-[Ve~"></td></tr><tr id="e38114aa-511a-4e1c-a421-441954b0114d"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Marjorie-LAJOIE-Zachary-LAGHA-e38114aa511a4e1ca421441954b0114d">Marjorie LAJOIE / Zachary LAGHA</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-yellow">SC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">Westside Story</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IzlqzsyV4" class="url-value">https://weibo.com/5909340151/IzlqzsyV4</a></td><td class="cell-[Ve~"></td></tr><tr id="f0c2eaa9-25a9-47ea-b456-9d8291c70bed"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Dmitri-Aliev-f0c2eaa925a947eab4569d8291c70bed">Dmitri Aliev</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">RC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-pink">SP</span></td><td class="cell-pGpk">where</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/Izli5tuLG" class="url-value">https://weibo.com/5909340151/Izli5tuLG</a></td><td class="cell-[Ve~"></td></tr><tr id="bfbe3823-05a7-44fa-a281-90355b4da6df"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Natalie-TASCHLEROVA-Filip-TASCHLER-bfbe382305a744faa28190355b4da6df">Natalie TASCHLEROVA / Filip TASCHLER</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">一个美国人在巴黎</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/Ixw464B82" class="url-value">https://weibo.com/5909340151/Ixw464B82</a></td><td class="cell-[Ve~">jgp-普莱西德湖站</td></tr><tr id="c7d7f2ef-0213-48b0-a3a0-6964bf91baa6"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Natalie-TASCHLEROVA-Filip-TASCHLER-c7d7f2ef021348b0a3a06964bf91baa6">Natalie TASCHLEROVA / Filip TASCHLER</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">一个美国人在巴黎</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAAikbhBD" class="url-value">https://weibo.com/5909340151/IAAikbhBD</a></td><td class="cell-[Ve~"></td></tr><tr id="320979c2-3a79-4cb1-8271-a8115de56a27"><td class="cell-zJ2k"><span class="selected-value select-value-color-red">Ladies</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Nelli-IOFFE-320979c23a794cb18271a8115de56a27">Nelli IOFFE</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-pink">SP</span></td><td class="cell-pGpk">猫</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAAxlvv09" class="url-value">https://weibo.com/5909340151/IAAxlvv09</a></td><td class="cell-[Ve~"></td></tr><tr id="9bb2e3bc-1b61-4de1-b673-1f44021f876e"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Sasha-FEAR-George-WADDELL-9bb2e3bc1b614de1b6731f44021f876e">Sasha FEAR / George WADDELL</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-green">JGP</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-green">FD</span></td><td class="cell-pGpk">一个美国人在巴黎</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABmRbD1h" class="url-value">https://weibo.com/5909340151/IABmRbD1h</a></td><td class="cell-[Ve~">Gdansk</td></tr><tr id="f2d45e12-b382-4dc1-9526-829eee7df4b3"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Andrei-Lazukin-f2d45e12b3824dc19526829eee7df4b3">Andrei Lazukin</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">COC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-pink">SP</span></td><td class="cell-pGpk">三个火枪手</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/Iw9u81zLF" class="url-value">https://weibo.com/5909340151/Iw9u81zLF</a></td><td class="cell-[Ve~"></td></tr><tr id="0901483a-ce6b-4c3a-b71b-62893293ed91"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Andrei-Lazukin-0901483ace6b4c3ab71b62893293ed91">Andrei Lazukin</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-yellow">SC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-pink">SP</span></td><td class="cell-pGpk">三个火枪手</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAAWzAfOD" class="url-value">https://weibo.com/5909340151/IAAWzAfOD</a></td><td class="cell-[Ve~"></td></tr><tr id="01a5ad2f-0013-473c-ad13-ea64cffb9768"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Artur-Danielian-01a5ad2f0013473cad13ea64cffb9768">Artur Danielian</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-pink">SP</span></td><td class="cell-pGpk">唐璜</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IxcVPcrhF" class="url-value">https://weibo.com/5909340151/IxcVPcrhF</a></td><td class="cell-[Ve~"></td></tr><tr id="fb849684-256d-4e37-b15d-e08c2d3ad974"><td class="cell-zJ2k"><span class="selected-value select-value-color-purple">Pairs</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Sofiia-NESTEROVA-Artem-DARENSKYI-fb849684256d4e37b15de08c2d3ad974">Sofiia NESTEROVA / Artem DARENSKYI</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-pink">SP</span></td><td class="cell-pGpk">唐璜</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IyjNUpyek" class="url-value">https://weibo.com/5909340151/IyjNUpyek</a></td><td class="cell-[Ve~"></td></tr><tr id="0911255b-8348-40d6-aeec-44c11963d053"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Aleksandr-SELEVKO-0911255b834840d6aeec44c11963d053">Aleksandr SELEVKO</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">巴黎圣母院</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IvHje8t2A" class="url-value">https://weibo.com/5909340151/IvHje8t2A</a></td><td class="cell-[Ve~">芬兰杯</td></tr><tr id="03e49386-0f95-42a5-bafa-567f8f79f644"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Harrison-Jon-Yen-WONG-03e493860f9542a5bafa567f8f79f644">Harrison Jon-Yen WONG</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">4CC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">巴黎圣母院</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IyjUlF2gz" class="url-value">https://weibo.com/5909340151/IyjUlF2gz</a></td><td class="cell-[Ve~"></td></tr><tr id="a73d443a-1d17-4c70-ae7b-7fba75cf799d"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Nika-EGADZE-a73d443a1d174c70ae7b7fba75cf799d">Nika EGADZE</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-pink">SP</span></td><td class="cell-pGpk">巴黎圣母院</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAAn5E1IQ" class="url-value">https://weibo.com/5909340151/IAAn5E1IQ</a></td><td class="cell-[Ve~"></td></tr><tr id="18252562-4f14-4570-886b-9bfcae74da44"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Oliwia-BOROWSKA-Filip-BOJANOWSKI-182525624f144570886b9bfcae74da44">Oliwia BOROWSKA / Filip BOJANOWSKI</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">雨中曲</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABrlAypJ" class="url-value">https://weibo.com/5909340151/IABrlAypJ</a></td><td class="cell-[Ve~"></td></tr><tr id="0127bdc8-31b4-472d-a575-83d5a78c5394"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Sasha-FEAR-George-WADDELL-0127bdc831b4472da57583d5a78c5394">Sasha FEAR / George WADDELL</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-green">JGP</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">雨中曲</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IABls4o9E" class="url-value">https://weibo.com/5909340151/IABls4o9E</a></td><td class="cell-[Ve~">Gdansk</td></tr><tr id="750b3bc0-ad3e-4be0-82b8-996dd601031e"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Sihyeong-LEE-750b3bc0ad3e4be082b8996dd601031e">Sihyeong LEE</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">4CC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">真爱不死</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAAFJiy9k" class="url-value">https://weibo.com/5909340151/IAAFJiy9k</a></td><td class="cell-[Ve~"></td></tr><tr id="f5038486-234e-46cd-9189-1ecae9852cee"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Sihyeong-LEE-f5038486234e46cd91891ecae9852cee">Sihyeong LEE</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">真爱不死</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAAYtudgl" class="url-value">https://weibo.com/5909340151/IAAYtudgl</a></td><td class="cell-[Ve~"></td></tr><tr id="ae465bde-2c1c-483f-b063-b4b53c115abe"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Victoria-SINITSINA-Nikita-KATSALAPOV-ae465bde2c1c483fb063b4b53c115abe">Victoria SINITSINA / Nikita KATSALAPOV</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">RC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">雨中曲</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IC6lj7hy3" class="url-value">https://weibo.com/5909340151/IC6lj7hy3</a></td><td class="cell-[Ve~"></td></tr><tr id="11f0331c-2489-4734-93a2-7d92b0505dbc"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Victoria-SINITSINA-Nikita-KATSALAPOV-11f0331c2489473493a27d92b0505dbc">Victoria SINITSINA / Nikita KATSALAPOV</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">雨中曲</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAB3c1r4z" class="url-value">https://weibo.com/5909340151/IAB3c1r4z</a></td><td class="cell-[Ve~"></td></tr><tr id="dd7f01f6-f838-44c8-b5b0-48528d51a656"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Victoria-SINITSINA-Nikita-KATSALAPOV-dd7f01f6f83844c8b5b048528d51a656">Victoria SINITSINA / Nikita KATSALAPOV</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">COC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">雨中曲</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAAaHBnBG" class="url-value">https://weibo.com/5909340151/IAAaHBnBG</a></td><td class="cell-[Ve~"></td></tr><tr id="d3d0c88f-105c-431a-942a-a9617eae3366"><td class="cell-zJ2k"><span class="selected-value select-value-color-red">Ladies</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Ivetta-BERKOVICH-d3d0c88f105c431a942aa9617eae3366">Ivetta BERKOVICH</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-pink">SP</span></td><td class="cell-pGpk">德古拉</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAA7Zv5Wx" class="url-value">https://weibo.com/5909340151/IAA7Zv5Wx</a></td><td class="cell-[Ve~"></td></tr><tr id="f9f5fd8a-276e-4dd8-a6f5-9d39e93f8d72"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Conrad-ORZEL-f9f5fd8a276e4dd8a6f59d39e93f8d72">Conrad ORZEL</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-red">NHK</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">悲惨世界</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAyRUqTxM" class="url-value">https://weibo.com/5909340151/IAyRUqTxM</a></td><td class="cell-[Ve~"></td></tr><tr id="8f0e7ff1-09aa-4c50-8d88-d20cd1bdc210"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Conrad-Orzel-8f0e7ff109aa4c508d88d20cd1bdc210">Conrad Orzel</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">COC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">悲惨世界</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IxetoaScM" class="url-value">https://weibo.com/5909340151/IxetoaScM</a></td><td class="cell-[Ve~"></td></tr><tr id="f3dbbd8e-8ef5-4660-8964-2c3319157a33"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Emily-ROSE-BROWN-James-HERNANDEZ-f3dbbd8e8ef5466089642c3319157a33">Emily ROSE BROWN / James HERNANDEZ</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-purple">JWC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-green">FD</span></td><td class="cell-pGpk">悲惨世界</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IAzRZxQ7S" class="url-value">https://weibo.com/5909340151/IAzRZxQ7S</a></td><td class="cell-[Ve~"></td></tr><tr id="4839bd34-77bd-4f57-b5be-f8754e86a648"><td class="cell-zJ2k"><span class="selected-value select-value-color-purple">Pairs</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Tarah-KAYNE-Danny-O-SHEA-4839bd3477bd4f57b5bef8754e86a648">Tarah KAYNE / Danny O&#x27;SHEA</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">4CC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">悲惨世界</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IwsscvHZv" class="url-value">https://weibo.com/5909340151/IwsscvHZv</a></td><td class="cell-[Ve~"></td></tr><tr id="75e9d765-1366-47a2-8ae0-e262aa0d13d1"><td class="cell-zJ2k"><span class="selected-value select-value-color-purple">Pairs</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Tarah-KAYNE-Danny-O-SHEA-75e9d765136647a28ae0e262aa0d13d1">Tarah KAYNE / Danny O&#x27;SHEA</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value">COC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">悲惨世界</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IzlnkcEfm" class="url-value">https://weibo.com/5909340151/IzlnkcEfm</a></td><td class="cell-[Ve~"></td></tr><tr id="888757b4-7742-4bd9-bc93-b633d6ab5c4d"><td class="cell-zJ2k"><span class="selected-value select-value-color-purple">Pairs</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Tarah-KAYNE-Danny-O-SHEA-888757b477424bd9bc93b633d6ab5c4d">Tarah KAYNE / Danny O&#x27;SHEA</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-red">NHK</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">悲惨世界</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IzloqaEPS" class="url-value">https://weibo.com/5909340151/IzloqaEPS</a></td><td class="cell-[Ve~"></td></tr><tr id="89d62bb1-8820-496b-a210-f5870e9858ae"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Wanqi-Ning-Chao-Wang-89d62bb18820496ba210f5870e9858ae">Wanqi Ning /Chao Wang </a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">4CC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-green">FD</span></td><td class="cell-pGpk">摇滚莫扎特</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IwUQi3UnN" class="url-value">https://weibo.com/5909340151/IwUQi3UnN</a></td><td class="cell-[Ve~">上海超级杯</td></tr><tr id="19c6a9c7-ddc9-419d-a744-9cc5fd2baf97"><td class="cell-zJ2k"><span class="selected-value select-value-color-red">Ladies</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Alessia-Tornaghi-19c6a9c7ddc9419da7449cc5fd2baf97">Alessia Tornaghi</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-orange">FS</span></td><td class="cell-pGpk">日落大道</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/Ivzvl8il9" class="url-value">https://weibo.com/5909340151/Ivzvl8il9</a></td><td class="cell-[Ve~"></td></tr><tr id="876f8d7d-9619-4857-85f9-b3ccbc2974a8"><td class="cell-zJ2k"><span class="selected-value select-value-color-blue">Men</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-on"></div></td><td class="cell-title"><a href="https://www.notion.so/Nikita-MANKO-876f8d7d9619485785f9b3ccbc2974a8">Nikita MANKO</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-green">2019</span></td><td class="cell-zeIZ"><span class="selected-value select-value-color-green">JGP</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-pink">SP</span></td><td class="cell-pGpk">JCS</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/ID1uDj4du" class="url-value">https://weibo.com/5909340151/ID1uDj4du</a></td><td class="cell-[Ve~"></td></tr><tr id="4b628a13-5435-42e1-86fd-a6c2835ebe7d"><td class="cell-zJ2k"><span class="selected-value select-value-color-green">IceDance</span></td><td class="cell-R&quot;&#x27;$"><div class="checkbox checkbox-off"></div></td><td class="cell-title"><a href="https://www.notion.so/Alexandra-NAZAROVA-Maxim-NIKITIN-4b628a13543542e186fda6c2835ebe7d">Alexandra NAZAROVA / Maxim NIKITIN</a></td><td class="cell-8HR;"><span class="selected-value select-value-color-blue">2020</span></td><td class="cell-zeIZ"><span class="selected-value">EC</span></td><td class="cell-~~kq"><span class="selected-value select-value-color-default">RD</span></td><td class="cell-pGpk">42nd Street</td><td class="cell-zHjK"><a href="https://weibo.com/5909340151/IDj8vaDeq" class="url-value">https://weibo.com/5909340151/IDj8vaDeq</a></td><td class="cell-[Ve~"></td></tr></tbody></table></div></article></body></html>
